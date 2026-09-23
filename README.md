@@ -1,6 +1,6 @@
-# TipWise — Tip Calculator
+# TipWise — Smart Tip Calculator
 
-A modern, responsive tip calculator for quickly calculating tips and splitting bills between multiple people.
+A premium, responsive tip calculator designed for real-world restaurant bill splitting.
 
 ## 🚀 Live Demo
 
@@ -8,26 +8,35 @@ A modern, responsive tip calculator for quickly calculating tips and splitting b
 
 ## ✨ Features
 
-- 💵 Multiple currencies — USD, INR, EUR, GBP, AUD, CAD, SGD
-- 🎯 Tip presets — 10%, 15%, 18%, 20%, and 25%
-- 🎚️ Custom tip percentage slider
-- 👥 Split the bill between multiple people
-- 💰 Tip and total amount per person
-- 🧾 Bill and tip breakdown
-- 🌙 Dark mode
-- 💾 Save recent calculations in browser local storage
-- 🗑️ Clear calculation history
-- 📱 Responsive mobile-friendly design
-- ♿ Keyboard-friendly controls
-- 💱 Automatic currency formatting
+- 💵 Multiple currencies — USD, INR, EUR, GBP, AUD, CAD, SGD, AED, JPY
+- 🎯 Tip presets and custom tip slider
+- 👥 Equal bill splitting
+- ⚖️ Unequal split mode
+- 🧾 Tax and service-charge calculation
+- 🔢 Round-up per-person totals
+- 💰 Detailed bill, tip, tax, service and final-total breakdown
+- 📋 One-click copy of the bill summary
+- 📤 Native share support on compatible devices
+- 💾 Saved calculation history
+- 🧠 Persistent user preferences
+- 🌙 Premium dark/light themes
+- 📱 Responsive mobile-first UI
+- 📲 Installable as a PWA
+- 📴 Offline support through a service worker
+- ♿ Accessible controls and keyboard-friendly inputs
+- 💱 Locale-aware currency formatting
 
 ## 🛠️ Technologies
 
 - HTML5
 - CSS3
 - JavaScript
-- Browser Local Storage
-- Intl.NumberFormat API
+- Local Storage API
+- Clipboard API
+- Web Share API
+- Service Worker API
+- Web App Manifest
+- Intl.NumberFormat
 
 ## 📂 Project Structure
 
@@ -35,16 +44,14 @@ A modern, responsive tip calculator for quickly calculating tips and splitting b
 TipCalculator/
 ├── index.html
 ├── index.js
+├── manifest.json
+├── sw.js
 └── README.md
 ```
 
 ## ▶️ Run Locally
 
 No build tools or dependencies are required.
-
-Simply open `index.html` in a browser.
-
-Or run a local server:
 
 ```bash
 python3 -m http.server 8000
@@ -56,19 +63,19 @@ Then open:
 http://localhost:8000
 ```
 
-## 🧮 How It Works
+> A local HTTP server is recommended because PWA/service-worker features require a secure context or localhost.
 
-Enter the bill amount, select a tip percentage, choose the number of people, and TipWise automatically calculates:
+## 🧮 Advanced Calculation
 
-- Total tip
-- Tip per person
-- Bill per person
-- Total bill
-- Total per person
+TipWise can calculate:
 
-## 📱 Responsive Design
+**Bill + Tip + Tax + Service Charge = Final Bill**
 
-The application is designed to work across desktop, tablet, and mobile screens.
+Then it can split the final amount across multiple people, with optional round-up and custom first-person sharing.
+
+## 📱 PWA & Offline
+
+Once the application has been loaded online, supported browsers can cache the core application so TipWise can continue working offline.
 
 ## 📄 License
 
