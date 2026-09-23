@@ -1,0 +1,10 @@
+{
+  "name": "TipWise — Smart Tip Calculator",
+  "short_name": "TipWise",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070914",
+  "theme_color": "#0a0d1a",
+  "description": "Premium tip calculator with tax, service charge, flexible splitting and offline support.",
+  "icons": []
+}
